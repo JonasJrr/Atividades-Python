@@ -1,5 +1,7 @@
 #CONTADOR DE LETRAS, CONSOANTES E VOGAIS
 
+from time import sleep
+
 print("Descubra quantas letras, vogais e consoantes uma frase ou palavra possui.")
 
 entrada_com_espacamento = input("Digite aqui a frase ou palavra que você deseja verificar: ")
@@ -17,4 +19,7 @@ for i in entrada:
     else:
         count_consoantes += 1
 
-print("Quantidade de vogais: {0}. Quantidade de consoantes: {1}. Quantidade de letras: {2}.".format(count_vogais, count_consoantes, len(entrada)))
+print("Processando...")
+sleep(1)
+
+print(f"Quantidade de vogais: {count_vogais}\nQuantidade de consoantes: {count_consoantes}\nQuantidade de letras: {len(entrada)}")
