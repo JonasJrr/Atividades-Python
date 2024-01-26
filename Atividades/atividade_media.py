@@ -1,29 +1,37 @@
 #CÁLCULO DA MÉDIA ESCOLAR
 
-print("Aqui você poderá calcular com base na média da sua escola se você ira ser aprovado(a) ou não.")
+from time import sleep
 
-media_escola = input("Digite a média da sua escola: ")
+print("Aqui você poderá calcular se você foi aprovado(a) ou não com base na média da sua escola.")
 
-if media_escola.isdigit(): 
+while True:
+    media_escola = input("Digite a média da sua escola (Exemplo -> 6): ")
 
-    nota1 = input("Digite qual a sua nota da primeira unidade: ")
-    nota2 = input("Digite qual a sua nota da segunda unidade: ")
-    nota3 = input("Digite qual a sua nota da terceira unidade: ")
+    if media_escola.isdigit(): 
 
-    if nota1.isdigit() and nota2.isdigit() and nota3.isdigit(): 
+        nota1 = input("Digite a sua nota da primeira unidade (Exemplo -> 6.5): ")
+        nota2 = input("Digite a sua nota da segunda unidade: ")
+        nota3 = input("Digite a sua nota da terceira unidade: ")
 
-        media = (float(nota1) + float(nota2) + float(nota3)) / 3
+        print("Processando...")
+        sleep(1)
 
-        if media >= int(media_escola):
-            print("A sua média é {} e você foi aprovado(a)!".format(round(media, 2)))
-        else:
-            print("A sua média é {} e infelizmente você não foi aprovado(a).".format(round(media, 2)))    
-                
+        try: 
+
+            media = (float(nota1) + float(nota2) + float(nota3)) / 3
+
+            if media >= int(media_escola):
+                print(f"A sua média é {media:.1f} e você foi aprovado(a). Parabéns!")
+                break
+            else:
+                print(f"A sua média é {media:.1f} e infelizmente você não foi aprovado(a).")
+                break    
+                    
+        except:
+            print("Tente novamente e digite somente notas válidas.")
+            
     else:
-        print("Tente novamente e digite uma nota válida.")
-        
-else:
-    print("Insira uma média válida.")           
+        print("INSIRA UMA MÉDIA VÁLIDA")           
     
     
 
