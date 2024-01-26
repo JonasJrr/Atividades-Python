@@ -15,7 +15,7 @@ while True:
     if letra_digitada and letra_digitada.isalpha():
 
         if len(letra_digitada) > 1:
-            print("Digite apenas uma letra.")
+            print("*DIGITE APENAS UMA LETRA*")
         else:
             if letra_digitada in palavra_secreta:
                 letras_acertadas += letra_digitada
@@ -30,7 +30,7 @@ while True:
 
             tentativas += 1        
 
-            print(palavra_formada)
+            print(f"Palavra secreta: {palavra_formada}")
 
             if tentativas == 20: # QUANTIDADE MÁXIMA DE TENTATIVAS PERMITADAS
                 print("Você excedeu o número máximo de tentativas. Tente novamente!")
@@ -41,4 +41,4 @@ while True:
                 break
 
     else:
-        print("Você precisa digitar uma letra")
+        print("*VOCÊ PRECISA DIGITAR UM LETRA*")
