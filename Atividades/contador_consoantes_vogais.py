@@ -2,24 +2,29 @@
 
 from time import sleep
 
-print("Descubra quantas letras, vogais e consoantes uma frase ou palavra possui.")
+print("Descubra quantas letras, vogais e consoantes uma frase/palavra possui")
 
-entrada_com_espacamento = input("Digite aqui a frase ou palavra que você deseja verificar: ")
+vogais = "aáãàeéèiìíoòóõuùú"
+contador_vogais = contador_consoantes = 0 
 
-vogais = "aáãeéiíoóõuú"
+while True:
+    entrada_usuario = input("Digite aqui a frase ou palavra que você deseja verificar: ")
 
-count_vogais = 0 #Contador de vogais
-count_consoantes = 0 #Contador de consoantes
+    entrada_formatada = entrada_usuario.replace(" ", "").strip().lower()
 
-entrada = entrada_com_espacamento.replace(" ", "").lower() #Tratando os espaçamentos do input e letras maiúsculas
+    if entrada_formatada.isalpha():
 
-for i in entrada:
-    if i in vogais:
-        count_vogais += 1
+        for letra in entrada_formatada:
+            if letra in vogais:
+                contador_vogais += 1
+            else:
+                contador_consoantes += 1
+
+        print("Processando...")
+        sleep(1)
+
+        print(f"Quantidade de vogais: {contador_vogais}\nQuantidade de consoantes: {contador_consoantes}\nQuantidade de letras: {len(entrada_formatada)}")
+        break
+
     else:
-        count_consoantes += 1
-
-print("Processando...")
-sleep(1)
-
-print(f"Quantidade de vogais: {count_vogais}\nQuantidade de consoantes: {count_consoantes}\nQuantidade de letras: {len(entrada)}")
+        print("TENTE NOVAMENTE E INSIRA UMA FRASE/PALAVRA VÁLIDA")
