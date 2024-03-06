@@ -17,7 +17,6 @@ while True:
         sleep(1)
 
         try: 
-
             media = (float(nota1) + float(nota2) + float(nota3)) / 3
 
             if media >= int(media_escola):
@@ -26,12 +25,13 @@ while True:
             else:
                 print(f"A sua média é {media:.1f} e infelizmente você não foi aprovado(a).")
                 break    
-                    
         except:
             print("Tente novamente e digite somente notas válidas.")
             
+    elif media_escola in "Ss":
+        break  
     else:
-        print("INSIRA UMA MÉDIA VÁLIDA")           
+        print("Digite uma média válida ou 'S' para sair")           
     
     
 
