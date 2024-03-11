@@ -1,4 +1,4 @@
-#CÁLCULO DE DESCONTOS
+# CÁLCULO DE DESCONTOS
 
 while True:
     try:

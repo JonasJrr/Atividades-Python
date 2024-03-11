@@ -1,4 +1,4 @@
-#TABUADA
+# TABUADA
 from time import sleep
 
 while True:

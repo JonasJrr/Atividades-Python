@@ -1,4 +1,4 @@
-#CÁLCULO DE IMC
+# CÁLCULO DE IMC
 
 from time import sleep
 

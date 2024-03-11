@@ -1,4 +1,4 @@
-#NÚMERO SECRETO
+# NÚMERO SECRETO
 
 from random import randrange
 

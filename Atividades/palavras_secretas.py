@@ -1,4 +1,4 @@
-#PALAVRAS SECRETAS
+# PALAVRAS SECRETAS
 
 from random import randint
 

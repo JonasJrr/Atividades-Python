@@ -1,4 +1,4 @@
-#SORTEIO DE NÚMERO
+# SORTEIO DE NÚMERO
 
 from random import randrange
 

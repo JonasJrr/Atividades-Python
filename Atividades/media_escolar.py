@@ -1,4 +1,4 @@
-#CÁLCULO DA MÉDIA ESCOLAR
+# CÁLCULO DA MÉDIA ESCOLAR
 
 from time import sleep
 
